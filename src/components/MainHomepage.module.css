@@ -1,0 +1,225 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grey+Qo&display=swap");
+
+.mainHomepage {
+  width: 100%;
+  height: 91vh;
+  background: url(/cocktail-bg.webp);
+  background-size: cover;
+  /* filter: blur(2px); */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainGrid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  color: rgb(255, 255, 255);
+  font-family: "Dancing Script", cursive;
+  font-size: 16px;
+}
+.mainShadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.43);
+  z-index: 2;
+  animation: fadeIn 1.7s linear;
+}
+
+.topic {
+  font-size: 32px;
+  grid-area: 1/2;
+  align-self: center;
+  justify-self: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  animation: slideTop 1s ease-in;
+}
+@keyframes slideTop {
+  from {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+}
+
+.slogan {
+  grid-area: 2/3;
+  font-size: 42px;
+  justify-self: start;
+  align-self: center;
+  position: relative;
+  z-index: 2;
+  animation: slideLeft 1s ease-in;
+  overflow: hidden;
+}
+.toLogin {
+  grid-area: 2/1;
+  font-size: 42px;
+  position: relative;
+  z-index: 2;
+}
+.toLoginContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.toLoginContainer p {
+  animation: slideLeft 1s ease-in;
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+/* @keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+} */
+.toLogin img {
+  position: absolute;
+  bottom: -4rem;
+  right: -9rem;
+  width: 15rem;
+  height: 10rem;
+  animation: fadeIn 1.8s ease-in;
+}
+.loginButton {
+  background: radial-gradient(
+    circle,
+    rgba(139, 0, 0, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em var(--burgundy-main);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  z-index: 2;
+  grid-area: 3/2;
+  width: 12em;
+  font-size: 28px;
+  justify-self: center;
+  justify-content: center;
+  font-weight: 700;
+  animation: slideBottom 1s ease-in;
+}
+
+.loginButton .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em var(--burgundy-main);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.loginButton:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.loginButton .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: var(--burgundy-main);
+}
+
+.loginButton:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.loginButton:active .icon {
+  transform: scale(0.95);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes slideBottom {
+  from {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1750px) {
+  .topic {
+    font-size: 28px;
+  }
+  .toLogin {
+    font-size: 36px;
+  }
+  .slogan {
+    font-size: 36px;
+  }
+  .toLogin img {
+    right: -5rem;
+    width: 10rem;
+  }
+  .loginButton {
+    width: 12em;
+    height: 2.4em;
+  }
+}
+
+@media screen and (max-width: 1510px) {
+  .topic {
+    font-size: 22px;
+  }
+  .toLogin {
+    font-size: 28px;
+  }
+  .slogan {
+    font-size: 28px;
+  }
+  .toLogin img {
+    right: -2rem;
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .topic {
+    font-size: 18px;
+  }
+  .toLogin {
+    font-size: 22px;
+  }
+  .slogan {
+    font-size: 22px;
+  }
+  .toLogin img {
+    right: 0rem;
+    width: 10rem;
+  }
+}

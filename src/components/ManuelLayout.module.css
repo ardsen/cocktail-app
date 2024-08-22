@@ -1,0 +1,109 @@
+.manuelLayoutContainer {
+  width: 100%;
+  display: flex;
+  padding: 3rem;
+  gap: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+.manuelLayoutInnerContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideIn 0.5s ease-in;
+}
+.typeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(245, 222, 179, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset;
+  cursor: pointer;
+  padding: 1rem 3rem 1rem 1rem;
+  transition: all 0.2s;
+  border-radius: 20px;
+}
+.typeContainer h3 {
+  background-color: var(--burgundy-main);
+  padding: 0.2rem 1.5rem;
+  box-shadow: 0px 10px 10px rgb(182, 29, 29) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px rgb(71, 1, 1) inset;
+  background-color: rgb(198, 114, 114);
+  border-radius: 45px;
+  text-align: center;
+}
+.typeContainer p {
+  color: black;
+  text-align: center;
+}
+.typeContainer::after {
+  content: "\21E8";
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  right: 0;
+  border-radius: 0px 20px 20px 0;
+  box-shadow: 0px 10px 10px rgb(182, 29, 29) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px rgb(71, 1, 1) inset;
+  background-color: rgb(198, 114, 114);
+}
+.typeContainer:hover {
+  transform: scale(1.02);
+}
+.secondOptionsContainer {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  animation: slideIn 0.5s ease-in;
+}
+.secondOptionsContainer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 100px;
+}
+/* \27F1 */
+.secondOptionsContainer ul h4 {
+  text-align: center;
+  padding: 0.4rem 1rem 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgb(182, 29, 29) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px rgb(71, 1, 1) inset;
+  background-color: rgb(198, 114, 114);
+  position: relative;
+}
+.secondOptionsContainer ul h4::after {
+  content: "\27F1";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+.secondOptionsContainer ul li {
+  text-align: center;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px rgb(182, 29, 29) inset,
+    0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px rgb(71, 1, 1) inset;
+  background-color: rgb(198, 114, 114);
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+}

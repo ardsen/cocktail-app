@@ -1,0 +1,224 @@
+.cocktailContainer {
+  width: 100%;
+  height: 90%;
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.cocktailContainer h3 {
+  box-shadow: var(--box-shadow-button-topic);
+  background-color: var(--bg-color-button-topic);
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  animation: slideDown ease-in 0.5s;
+}
+.materialContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  padding: 2rem;
+  border-radius: 20px;
+  color: black;
+  /* background: url("/parchment.jpg"); */
+  background-size: cover;
+  height: 100%;
+  width: 25%;
+  background-color: rgba(245, 222, 179, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset;
+  animation: fadeIn ease-in 0.5s;
+}
+.materialContainer h4 {
+  font-size: 22px;
+  /* width: 100%; */
+}
+.materialContainer li {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  text-align: start;
+}
+
+.materialContainer li::after {
+  content: "\2666";
+  position: absolute;
+  left: -0.8rem;
+  top: 0;
+}
+.topContainer {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.recipe {
+  width: 75%;
+  height: 100%;
+  border-radius: 20px;
+  /* background-color: rgba(245, 222, 179, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  padding: 2rem;
+  border-radius: 20px;
+  animation: slideIn ease-in 0.5s;
+}
+.recipe li {
+  text-align: start;
+  position: relative;
+  font-size: 16px;
+  /* color: ; */
+}
+.recipe li::after {
+  content: "\27AF";
+  position: absolute;
+  left: -1rem;
+  top: 0;
+}
+.recipe h4 {
+  /* width: 100%; */
+  font-size: 22px;
+}
+.bottomContainer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.bottomContainerInner {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 25px;
+  text-align: start;
+  padding: 1.2rem;
+  overflow-y: auto;
+  box-shadow: rgba(218, 218, 218, 0.17) 20px 23px 25px 0px inset,
+    rgba(214, 214, 214, 0.15) 30px 36px 30px 0px inset,
+    rgba(214, 213, 213, 0.1) 40px 79px 40px 0px inset;
+  border-radius: 20px 20px 0px 0px;
+  animation: fadeIn ease-in 0.5s;
+}
+.bottomContainerInner h4 {
+  padding: 0.2rem 0.5rem;
+}
+.commentIndividual {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 14px;
+}
+.commentAndScore {
+  display: flex;
+  justify-content: start;
+  /* gap: 40px; */
+}
+.commentAndScore h5 {
+  width: 50%;
+}
+.commentsInner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--box-shadow-button-topic);
+  background-color: var(--bg-color-button-topic);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.topicAddComment {
+  display: flex;
+  justify-content: space-between;
+}
+.topicAddComment button {
+  padding: 0.2rem 0.5rem;
+  box-shadow: var(--box-shadow-button-topic);
+  background-color: var(--bg-color-button-topic);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.noCommentYet {
+  padding: 0.2rem 0.5rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1750px) {
+  .cocktailContainer {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+  .recipe li {
+    text-align: start;
+    position: relative;
+    font-size: 14px;
+  }
+  .cocktailContainer h3 {
+    font-size: 20px;
+  }
+  .materialContainer {
+    padding: 1.5rem;
+    width: 20%;
+  }
+  .bottomContainerInner {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .cocktailContainer {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+  .recipe li {
+    text-align: start;
+    position: relative;
+    font-size: 13px;
+  }
+  .cocktailContainer h3 {
+    font-size: 18px;
+  }
+  .materialContainer {
+    padding: 1rem;
+    width: 20%;
+  }
+  .bottomContainerInner {
+    width: 55%;
+  }
+}

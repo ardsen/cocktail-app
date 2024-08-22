@@ -1,0 +1,107 @@
+.homeContainer {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50% 50%;
+  gap: 20px;
+}
+.firstParagraph {
+  grid-column: 1 / span 2;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 56px;
+  align-self: center;
+  justify-self: center;
+  animation: slideLeft 0.6s ease-in;
+}
+.secondParagraph {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 56px;
+  align-self: center;
+  justify-self: center;
+  animation: slideRightDelayed 1.2s ease-in;
+}
+.firstImg {
+  grid-area: 1/3;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  /* background-position: bottom; */
+  box-shadow: 20px 20px 30px hsla(0, 0%, 100%, 0.3);
+  transform: rotateX(10deg) rotateY(-18deg) rotateZ(3deg);
+  transition: all 0.3s;
+  animation: slideRight 0.6s ease-in;
+}
+.secondImg {
+  grid-area: 2/1;
+  height: 100%;
+  object-fit: cover;
+  justify-self: end;
+  border-radius: 20px;
+  transform: rotateX(-10deg) rotateY(-18deg) rotateZ(-3deg);
+  box-shadow: -20px 20px 30px hsla(0, 0%, 100%, 0.3);
+  transition: all 0.3s;
+  animation: slideLeftDelayed 1.2s ease-in;
+}
+.firstImg:hover,
+.secondImg:hover {
+  transform: rotate(0);
+  box-shadow: none;
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+}
+@keyframes slideLeftDelayed {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+}
+@keyframes slideRightDelayed {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 1510px) {
+  .firstParagraph,
+  .secondParagraph {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .firstParagraph,
+  .secondParagraph {
+    font-size: 45px;
+  }
+}
